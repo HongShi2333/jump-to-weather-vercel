@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>正在跳转</title>
+<script>
+    // 检测设备类型，并根据不同设备跳转到不同链接
+    function redirectBasedOnDevice() {
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+            // 如果是手机版，跳转到手机链接
+            window.location.href = 'https://m-wet.hongshi2333.us.kg';
+        } else {
+            // 如果是电脑版，跳转到电脑链接
+            window.location.href = 'https://w-wet.hongshi2333.us.kg';
+        }
+    }
+
+    // 页面加载时执行设备检测跳转
+    window.onload = function() {
+        redirectBasedOnDevice();
+    };
+</script>
+</head>
+<body>
+<!-- 如果不需要显示任何内容，可以将内容部分移除 -->
+</body>
+</html>
